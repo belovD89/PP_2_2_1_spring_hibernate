@@ -1,10 +1,10 @@
 package hiber.model;
 
 import org.hibernate.annotations.CascadeType;
-import org.hibernate.annotations.Entity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "cars")
@@ -33,6 +33,7 @@ public class Car {
 
     public Car() {
     }
+
 
     public Car(String model, String series) {
         this.model = model;
