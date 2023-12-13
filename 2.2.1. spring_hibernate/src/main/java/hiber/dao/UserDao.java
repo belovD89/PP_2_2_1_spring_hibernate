@@ -8,11 +8,10 @@ import java.util.List;
 public interface UserDao {
     void add(User user);
 
-    void addCar(Car car);
-
-    List<Car> listCars();
-
     List<User> listUsers();
 
     User getUserByCar(String model, String series);
 }
+
+
+
