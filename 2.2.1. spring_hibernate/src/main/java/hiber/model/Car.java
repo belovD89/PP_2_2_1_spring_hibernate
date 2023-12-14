@@ -1,5 +1,9 @@
 package hiber.model;
 
+import org.hibernate.annotations.Columns;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
 @Entity
@@ -7,8 +11,9 @@ import javax.persistence.*;
 public class Car {
 
     @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//  @Column(name = "id")
+//  @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long id;
 
     @Column(name = "model")
