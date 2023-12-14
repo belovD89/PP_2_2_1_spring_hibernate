@@ -23,7 +23,7 @@ public class MainApp {
         User user4 = new User("User4", "Lastname4", "user4@mail.ru");
 
         //cars
-        Car car1 = new Car("CAR1", "SERIES2", user1);
+        Car car1 = new Car("CAR1", "SERIES1", user1);
         Car car2 = new Car("CAR2", "SERIES2", user2);
         Car car3 = new Car("CAR3", "SERIES3", user3);
         Car car4 = new Car("CAR4", "SERIES4", user4);
@@ -50,9 +50,13 @@ public class MainApp {
 
         for (User user : userService.listUsers()) {
             System.out.println(user + " " + user.getCar());
-
-            context.close();
         }
-    }
 
+       // Получение владельца по модели и серии авто
+       System.out.println("Получение владельца по модели и серии:");
+       User user = userService.getUserByCar("CAR1", "SERIES1");
+       System.out.println(user);
+
+        context.close();
+    }
 }
